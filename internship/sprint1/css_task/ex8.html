@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "left main"
+        "footer footer";
+      gap: 5px;
+      border: 2px solid black;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #f7b3f7; 
+      color: #800080;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: #aa00ff ; 
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .left-panel {
+      grid-area: left;
+      background-color: #ff99cc; 
+      color: #000;
+      text-align: center;
+      padding: 40px;
+      font-size: 1.2rem;
+    }
+
+    main {
+      grid-area: main;
+      background-color: white;
+      color: #000;
+      text-align: center;
+      padding: 40px;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #bb8fce ; 
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "nav"
+          "left"
+          "main"
+          "footer";
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <nav>
+    Navigation Bar
+  </nav>
+  <div class="left-panel">Left Panel</div>
+  <main>
+    <p>Main Content</p>
+  </main>
+  <footer>Footer</footer>
+</body>
+</html>

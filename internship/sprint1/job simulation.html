@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Simulation Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --light-bg: #f8f9fa;
+            --dark-text: #343a40;
+            --white: #fff;
+            --light-blue-bg: #e7f5ff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        nav a.active {
+            background-color: var(--white);
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        main {
+            padding: 90px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 30px;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: var(--white);
+            margin-top: 70px;
+        }
+
+        .welcome-message h1 {
+            font-size: 3rem;
+            margin-bottom: 1.25rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .welcome-message p {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services li {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .services li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .services li h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+        }
+
+        .services li p {
+            color: var(--secondary-color);
+        }
+
+        .company-intro {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            padding: 2rem;
+            background-color: var(--light-blue-bg);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+
+            .columns {
+                flex-direction: column;
+            }
+
+            .column {
+                padding: 20px;
+            }
+
+            .welcome-message h1 {
+                font-size: 2.4rem;
+            }
+
+            .company-intro {
+                font-size: 1rem;
+            }
+
+            footer a {
+                margin: 0 8px;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .welcome-message {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="#">SimuJob</a>
+            </div>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome-message">
+            <h1>Experience realistic job simulations</h1>
+            <p>Designed to help you develop essential skills and confidently navigate your career path. Whether you're a
+                student, recent graduate, or seasoned professional, SimuJob provides a safe and effective environment to
+                learn, practice, and grow.</p>
+        </section>
+
+        <section class="columns">
+            <div class="column services">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>
+                        <h3>Virtual Internships</h3>
+                        <p>Gain practical experience in your field of interest through immersive virtual internships with
+                            leading companies.</p>
+                    </li>
+                    <li>
+                        <h3>Skill-Based Simulations</h3>
+                        <p>Master critical skills with targeted simulations that mirror real-world workplace scenarios.</p>
+                    </li>
+                    <li>
+                        <h3>Career Path Exploration</h3>
+                        <p>Explore different career paths and discover your ideal fit with our comprehensive simulation
+                            library.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column company-intro">
+                <h2>About SimuJob</h2>
+                <p>At SimuJob, we believe everyone deserves the opportunity to achieve their full career potential. We
+                    partner with industry experts to create realistic and engaging simulations that bridge the gap between
+                    education and employment. Our mission is to empower individuals with the skills, knowledge, and
+                    confidence they need to succeed in today's competitive job market. We value innovation, user success, and
+                    continuous improvement.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Contact us: <a href="tel:+15551234567">555-123-4567</a> | <a
+                    href="mailto:info@simujob.com">info@simujob.com</a></p>
+            <div>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+                <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

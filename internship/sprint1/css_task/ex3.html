@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            width: 60%;
+            height:90vh;
+            grid-template-rows: auto auto auto auto auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "main aside1"
+                "main section"
+                "aside2 aside2"
+                "footer footer";
+            border: 1px solid white;
+            gap: 5px;
+        }
+        header, nav, main, aside, section, footer {
+            border: 1px solid white;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            background-color: #ddd;
+        }
+        header { grid-area: header; }
+        nav { grid-area: nav; }
+        main { grid-area: main; }
+        .aside1 { grid-area: aside1; }
+        .aside2 { grid-area: aside2; }
+        section { grid-area: section; }
+        footer { grid-area: footer; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <aside class="aside1">Aside</aside>
+        <section>Section</section>
+        <aside class="aside2">Aside</aside>
+        <footer>Footer</footer>
+    </div>
+
+</body>
+</html>

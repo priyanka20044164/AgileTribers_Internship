@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout with Fixed Footer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      background-color: #888;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .main-content{
+      background-color: #e0e0e0;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .sidebar{
+      background-color: #888;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .main-content {
+      border: 1px solid #ddd;
+    }
+
+    .sidebar {
+      border: 1px solid #ddd;
+    }
+
+    footer {
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .content-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Header
+  </header>
+
+  <nav>
+    <a href="#">Navigation</a>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="main-content">
+      <h2>Main Content</h2>
+      <p>This is the main content section.</p>
+    </div>
+
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This is the sidebar section.</p>
+    </aside>
+    
+  </div>
+
+  <footer>
+    Footer
+  </footer>
+  
+</body>
+</html>

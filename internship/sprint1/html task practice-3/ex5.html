@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informational Webpage (Kitten Kare)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #ccc;
+            color: black;
+            text-align: left;
+            padding: 10px;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+            background-color: black;
+            padding: 5px 10px;
+           
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            border-right: 2px solid white;
+        }
+        .container {
+            display: flex;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        aside{
+            min-width:200px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kitten Kare</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About </a>
+        <a href="#">Services</a>
+    </nav>
+    
+    <div class="container">
+        <main>
+            <h2>Welcome!</h2>
+            <img src="bearimg.png" alt="Bear Image" width="300">
+            <p>The domestic cat (Felis catus) is a small, usually furry, domesticated, carnivorous mammal Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Integer ultricies suscipit porta. Cras sed sapien sodales massa facilisis pharetra. Mauris metus diam, bibendum id maximus rutrum, luctus vel neque. Duis a elit ligula. Sed laoreet neque felis, sit amet consequat orci tristique ut. Fusce hendrerit neque venenatis, elementum est sed, mattis justo. Ut vulputate vel sapien in iaculis. In hac habitasse platea dictumst. Maecenas vehicula convallis tempus. Nam laoreet sagittis felis a sagittis. Praesent scelerisque sagittis suscipit. </p>
+        </main>
+        
+        <aside>
+            <h3>Cat Body Types</h3>
+            <ul>
+                <li>Oriental</li>
+                <li>Foreign</li>
+                <li>Semi-Foreign</li>
+                <li>Semi-Cobby</li>
+                <li>Cobby</li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>

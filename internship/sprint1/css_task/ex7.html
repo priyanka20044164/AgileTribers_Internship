@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+      gap: 5px;
+      border: 2px solid black;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #f7b3f7; 
+      color: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color:#aa00ff; 
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      grid-area: main;
+      background-color: white;
+      color: #000;
+      text-align: center;
+      padding: 40px;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color:#bb8fce; 
+      color: black;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <nav>Navigation bar</nav>
+  <main>Main Content</main>
+  <footer>Footer</footer>
+</body>
+</html>

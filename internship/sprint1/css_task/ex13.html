@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Layout with CSS Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      display: grid;
+      grid-template-rows: 1fr 5px auto 5px auto 1fr 5px auto;
+      grid-template-columns: 1fr;
+      min-height: 100vh;
+    }
+
+    header, nav, .slideshow, .content, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      font-size: 2rem;
+    }
+
+    .gap-line {
+      background-color: white;
+      height: 10px;
+    }
+
+    nav {
+      background-color: #777;
+    }
+
+    .slideshow {
+      background-color: #555;
+      height: 200px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-color: #999
+    }
+
+    .box {
+      background-color: white;
+      height: 150px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #555;
+      width: 100%;
+      bottom: 0;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <div class="gap-line"></div>
+    <nav>Navigation Bar</nav>
+    <div class="gap-line"></div>
+    <div class="slideshow">Slideshow</div>
+    <div class="content">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="gap-line"></div>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

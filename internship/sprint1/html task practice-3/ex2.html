@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 30%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .description {
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid #000;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            font-size: 14px;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        .lined-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lined-text::before,
+        .lined-text::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #000;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome UI Photo Gallery</h1>
+        <hr>
+        <p class="lined-text"><strong>Welcome UI Photo Gallery</strong></p>
+        <div class="gallery">
+            <img src="ex2img1.png" alt="Landscape 1">
+            <img src="ex2img2.png" alt="Landscape 2">
+            <img src="ex2img3.png" alt="Landscape 3">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Integer ultricies suscipit porta. Cras sed sapien sodales massa facilisis pharetra. Mauris metus diam, bibendum id maximus rutrum, luctus vel neque. Duis a elit ligula. Sed laoreet neque felis, sit amet consequat orci tristique ut. Fusce hendrerit neque venenatis, elementum est sed, mattis justo.</p>
+        <div class="description">
+            <h2>Description about the Page</h2>
+            <p>Praesent condimentum tempor ipsum id porta. Maecenas ut tristique metus. Sed ut purus a velit lacinia pellentesque. Praesent consectetur lacinia volutpat. Pellentesque mollis erat sed magna vulputate efficitur. Sed vel tincidunt quam. Pellentesque in ex magna. Ut id suscipit ligula. Nam semper, nisi sed condimentum vestibulum, metus velit dictum lorem, vulputate pulvinar nisl ex ut felis. Maecenas eu varius odio. Nam condimentum massa sit amet fringilla ornare. Phasellus volutpat rhoncus justo, id interdum lectus pellentesque id. Nullam eu nisi et purus maximus lacinia. Aliquam rhoncus dui mauris, vitae hendrerit nisl blandit ac. </p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 My Simple Web Page. All rights reserved.
+    </footer>
+</body>
+</html>

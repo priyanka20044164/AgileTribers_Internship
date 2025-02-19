@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto auto auto auto auto auto;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "header header"
+        "intro hero"
+        "intro cta1"
+        "features features"
+        "more cta2"
+        "footer footer";
+      gap: 10px;
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #e0f0f0;
+      padding: 10px;
+      border: 2px solid black;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #a9d0d0;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .intro-copy {
+      grid-area: intro;
+      background-color: #b3d9d9;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .hero-image {
+      grid-area: hero;
+      background-color: #b3d9d9;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .cta1, .cta2 {
+      background-color: #d9e021;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .cta1 {
+      grid-area: cta1;
+    }
+
+    .features {
+      grid-area: features;
+      background-color: #b3d9d9;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .more-copy {
+      grid-area: more;
+      background-color: #b3d9d9;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .cta2 {
+      grid-area: cta2;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #a9d0d0;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "intro"
+          "hero"
+          "cta1"
+          "features"
+          "more"
+          "cta2"
+          "footer";
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <div class="intro-copy">Intro Copy</div>
+  <div class="hero-image">Hero Image</div>
+  <div class="cta1">Call to Action</div>
+  <div class="features">Features</div>
+  <div class="more-copy">More Copy</div>
+  <div class="cta2">Call to Action</div>
+  <footer>Footer</footer>
+</body>
+</html>

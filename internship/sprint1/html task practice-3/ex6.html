@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page with Sidebar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            background-color:#0066cc;
+        }
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: left;
+        }
+        span{
+            font-size:24px;
+            font-weight:bold;
+        }
+        nav {
+            float: right;
+            padding: 10px;
+        }
+        nav a {
+            margin-left: 10px;
+        }
+        .container {
+            display: flex;
+            background-color: white;
+            width:100%;
+            
+        }
+        main {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        aside {
+            flex: 1;
+            background-color: #f4c842;
+            padding: 10px;
+            margin-left: 20px;
+            height: fit-content;
+        }
+        .useful-links a {
+            display: block;
+        }
+        .blog-post a{
+            font-weight:bold;
+            font-size:20px;
+        }
+        aside h3{
+            background-color: red;
+            padding:10px;
+        }
+        .main-container{
+            margin:10px;
+            background:#0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <div>
+    <header>
+      <span>My Awesome Blog</span>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+    <img src="ex6img.png" alt="Blog Image" width="100%">
+    </div>
+    <div class="container">
+        <main>
+            <div class="blog-post">
+                <a href="#">Title of the first blog</a>
+                <p><strong>By Azzi Ali</strong></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+            <hr>
+            <div class="blog-post">
+                <a  href="#">Title of the first blog</a>
+                <p><strong>By Azzi Ali</strong></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+        </main>
+        <aside>
+            <h3>Useful Links</h3>
+            <div class="useful-links">
+                <a href="#">AzziAli.com</a>
+                <a href="#">LizaCoding.org</a>
+            </div>
+        </aside>
+        
+    </div>
+    </div>
+</body>
+</html>

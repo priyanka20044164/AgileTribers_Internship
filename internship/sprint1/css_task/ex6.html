@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Presentation Style</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 20% 80%;
+      grid-template-areas:
+        "header header"
+        "nav article"
+        "footer footer";
+      gap: 5px;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #ffa500; 
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: blue; 
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    article {
+      grid-area: article;
+      background-color: green; 
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: brown; 
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "nav"
+          "article"
+          "footer";
+      }
+
+      nav, article {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <nav>Nav</nav>
+  <article>Article</article>
+  <footer>Footer</footer>
+</body>
+</html>
