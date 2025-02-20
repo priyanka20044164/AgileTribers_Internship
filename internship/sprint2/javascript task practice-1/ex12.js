@@ -1,0 +1,14 @@
+let person_name = "Charlie";
+let age = 30;
+let dob = "1994-05-12";     
+let height = 5.9;           
+let weight = 70.5;         
+let degree = "Bachelor of Science";
+let gender = "Male";
+console.log("Name:", person_name);
+console.log("Age:", age);
+console.log("Date of Birth:", dob);
+console.log("Height:", height, "feet");
+console.log("Weight:", weight, "kg");
+console.log("Degree:", degree);
+console.log("Gender:", gender);

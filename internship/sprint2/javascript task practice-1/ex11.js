@@ -1,0 +1,12 @@
+let person_name = "Alice";
+let age = 25;
+let isStudent = true;
+console.log("Initial Name:", person_name);
+console.log("Initial Age:", age);
+console.log("Is Student:", isStudent);
+person_name = "Bob";               
+age += 1;                 
+isStudent = !isStudent;    
+console.log("Updated Name:", person_name);
+console.log("Updated Age:", age);
+console.log("Is Student:", isStudent);
